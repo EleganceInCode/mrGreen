@@ -669,23 +669,27 @@
     }
 
     @media (max-width: 400px) {
+      .work-text {
+        padding: 0 8px !important;  /* было 12px, теперь текст ближе к краям */
+      }
       .work-text h3 {
-        font-size: 1.5rem;         
-        overflow-wrap: normal; 
+        font-size: 1.5rem;
+        overflow-wrap: normal;
         word-break: normal;
         hyphens: none;
-      }
-      .work-text {
-        padding: 0 12px !important;
+        margin-top: 0;             /* подтягиваем заголовок поближе к картинке */
       }
     }
     
     @media (max-width: 360px) {
       .work-text h3 {
-        font-size: 1.35rem;
+        font-size: 1.4rem;        /* ещё чуть мельче для 320px */
+      }
+      .work-text {
+        padding: 0 6px !important;
       }
     }
-    
+
     /* ======= ФУТЕР – стрелка всегда справа ======= */
     .footer-inner {
       flex-wrap: nowrap;         
