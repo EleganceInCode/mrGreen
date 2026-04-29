@@ -248,310 +248,11 @@
     }
 
     /* Адаптив для мобильных */
-      @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2.6rem;      /* было 4.5rem */
-      line-height: 1.2;
-    }
-    .hero p {
-      font-size: 1rem;        /* было 1.3rem */
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-     }
-    }
-  
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: 2.2rem;
-     }
-    }
+       /* ==========================================
+       ЕДИНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (бургер, hero, работы, услуги, контакты, футер)
+       ========================================== */
 
-    @media (max-width: 768px) {
-  .work-block {
-    flex-direction: column;
-    gap: 24px;
-    transform: translateY(40px) !important;
-  }
-  .work-block.visible {
-    transform: translateY(0) !important;
-  }
-
-  /* Картинка с сохранением пропорций */
-    .work-img {
-      width: 100%;
-      height: 0;
-      padding-bottom: 60%;      
-      background-size: cover;
-      background-position: center;
-      min-height: unset;       
-      border-radius: 0;     
-    }
-  
-    /* Текст теперь по центру, а не прижат к краю */
-    .work-text {
-      text-align: center;
-      padding: 0 12px;
-    }
-    .work-text h3 {
-      font-size: 1.8rem;
-      overflow-wrap: break-word;
-      word-wrap: break-word;       
-      hyphens: none;             
-      white-space: normal;    
-    }
-  
-  /* На самых маленьких экранах картинка чуть выше */
-  @media (max-width: 480px) {
-    .work-img {
-      padding-bottom: 75%;      /* 4:3 */
-    }
-    .work-text h3 {
-      font-size: 1.6rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .services-steps {
-      grid-template-columns: 1fr;
-      gap: 32px;
-    }
-    .step-img {
-      height: 160px;          /* было 180px, можно 140px для 320px */
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .step-img {
-      height: 140px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .logo {
-      font-size: 1.6rem;
-    }
-    .btn {
-      padding: 12px 28px;
-      font-size: 0.95rem;
-    }
-  }
-
-    /* Заголовок услуг */
-    .services-main-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 60px;
-      color: #ffffff;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-    
-    /* Сетка шагов */
-    .services-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 40px;
-      margin-bottom: 60px;
-    }
-    
-    /* Карточка шага */
-    .step-item {
-      text-align: center;
-    }
-    
-    /* Изображение (или иконка) */
-    .step-img {
-      width: 100%;
-      height: 200px;
-      background-size: cover;
-      background-position: center;
-      box-shadow: none;
-      border: none;
-    }
-    
-    /* Заголовок шага */
-    .step-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #ffffff;
-    }
-    
-    /* Описание */
-    .step-desc {
-      font-size: 0.9rem;
-      color: #b0bcae;
-      line-height: 1.5;
-      max-width: 280px;
-      margin: 0 auto;
-    }
-    
-    /* Ссылка "Подробнее об услугах" */
-    .services-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #a3c09b;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-      margin: 0 auto;
-      width: fit-content;
-      float: right;
-    }
-    
-    .services-more:hover {
-      border-color: #8ba888;
-      color: #ffffff;
-    }
-    
-    .services-more i {
-      font-size: 0.9rem;
-      transition: transform 0.2s;
-    }
-    
-    .services-more:hover i {
-      transform: translateX(4px);
-    }
-    
-    /* Адаптив */
-    @media (max-width: 900px) {
-      .services-steps {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px 30px;
-      }
-      .services-main-title {
-        font-size: 2.2rem;
-      }
-    }
-    
-    @media (max-width: 600px) {
-      .services-steps {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .step-img {
-        height: 180px;
-      }
-    }
-
-    /* Секция контактов */
-    .contact {
-      background: #1e2320;
-      padding: 100px 0;
-    }
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-    }
-    .contact-left {
-      flex: 1;
-      min-width: 250px;
-    }
-    .contact-subtitle {
-      font-size: 1.35rem;   
-      color: #b0bcae;
-      margin-bottom: 32px;
-      max-width: 400px;
-      line-height: 1.6;
-    }
-    .contact-phone {
-      font-size: 1.6rem;    
-      font-weight: 600;
-      color: #ffffff;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 12px;
-    }
-    .telegram-link {
-      font-size: 1.2rem;
-      color: #a3c09b;
-      text-decoration: none;
-      display: inline-block;
-      border-bottom: 1px solid rgba(163, 192, 155, 0.5);
-      transition: border-color 0.2s;
-    }
-    .telegram-link:hover {
-      border-color: #8ba888;
-    }
-    .contact-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-    .contact-icon {
-      font-size: 4rem;
-      opacity: 0.15;
-      margin-bottom: 16px;
-    }
-    .contact-discuss-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #a3c09b;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .contact-discuss-link:hover {
-      border-color: #8ba888;
-      color: #ffffff;
-    }
-    .contact-discuss-link i {
-      font-size: 0.9rem;
-      transition: transform 0.2s;
-    }
-    .contact-discuss-link:hover i {
-      transform: translateX(4px);
-    }
-
-    /* Футер */
-    .footer {
-      background: #151a16;
-      padding: 28px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    
-    .footer-copy {
-      color: #b0bcae;
-      font-size: 0.95rem;
-      margin: 0;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-    }
-    
-    .footer-top {
-      color: #b0bcae;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: color 0.3s ease;
-      display: inline-block;
-      line-height: 1;
-    }
-    
-    .footer-top:hover {
-      color: #ffffff;
-    }
-
-    /* БУРГЕР И МОБИЛЬНОЕ МЕНЮ */
+    /* Базовые стили бургера и мобильного меню */
     .burger {
       display: none;
       flex-direction: column;
@@ -574,16 +275,7 @@
     header.scrolled .burger span {
       background: #2d332b;
     }
-    
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      .burger {
-        display: flex;
-      }
-    }
-    
+
     .mobile-nav {
       position: fixed;
       top: 0;
@@ -612,8 +304,8 @@
       border-bottom: 1px solid rgba(255,255,255,0.1);
       padding-bottom: 12px;
     }
-    
-    /* Анимация бургера в крестик при открытом меню */
+
+    /* Бургер-анимация (крестик) */
     .burger.open span:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
@@ -623,25 +315,48 @@
     .burger.open span:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
-    
-    /* ======= ЗУМ НА МОБИЛЬНЫХ – убираем возможность пальцевого масштабирования ======= */
-    html, body {
-      overflow-x: hidden;
-      width: 100%;
-      position: relative;
+
+    /* Hero */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.6rem;
+        line-height: 1.2;
+      }
+      .hero p {
+        font-size: 1rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
-    img, video, iframe {
-      max-width: 100%;
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .logo {
+        font-size: 1.6rem;
+      }
+      .btn {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+      }
     }
-    
-    .hero video {
-      max-width: none;
+
+    /* Показываем бургер, скрываем десктопное меню на мобильных */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .burger {
+        display: flex;
+      }
     }
-    
-    /* ======= ЦИТАТА – убираем переполнение на узких экранах ======= */
+
+    /* Цитата */
     @media (max-width: 600px) {
       .philosophy q {
-        font-size: 2rem;        
+        font-size: 2rem;
         line-height: 1.3;
         padding: 0 10px;
       }
@@ -650,60 +365,133 @@
         padding: 0 10px;
       }
     }
-    
-    /* ======= РАБОТЫ – избавляемся от срезанного текста ======= */
+
+    /* Работы — контейнеры, картинки, текст */
     @media (max-width: 768px) {
+      .work-block {
+        flex-direction: column;
+        gap: 24px;
+        transform: translateY(40px) !important;
+      }
+      .work-block.visible {
+        transform: translateY(0) !important;
+      }
+
+      .work-img {
+        width: 100%;
+        height: 0;
+        padding-bottom: 60%;
+        background-size: cover;
+        background-position: center;
+        min-height: unset;
+        border-radius: 0;
+      }
+
       .work-text {
         width: 100%;
-        padding: 0 20px !important; 
+        padding: 0 16px;
         box-sizing: border-box;
+        text-align: center;
       }
+
       .work-text h3 {
         font-size: 1.8rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: none;
+        white-space: normal;
       }
       .work-text p {
         font-size: 0.95rem;
+        overflow-wrap: break-word;
         word-wrap: break-word;
-        hyphens: auto;
+        hyphens: none;
+      }
+    }
+
+    /* Чтобы «Современный пруд» и «Терраса с растениями» влезали без обрезки */
+    @media (max-width: 600px) {
+      .work-text h3 {
+        font-size: 1.6rem;
+      }
+      .work-text {
+        padding: 0 12px;
       }
     }
 
     @media (max-width: 400px) {
-      .work-text {
-        padding: 0 8px !important;  /* было 12px, теперь текст ближе к краям */
-      }
       .work-text h3 {
         font-size: 1.5rem;
-        overflow-wrap: normal;
-        word-break: normal;
-        hyphens: none;
-        margin-top: 0;             /* подтягиваем заголовок поближе к картинке */
-      }
-    }
-    
-    @media (max-width: 360px) {
-      .work-text h3 {
-        font-size: 1.4rem;        /* ещё чуть мельче для 320px */
       }
       .work-text {
-        padding: 0 6px !important;
+        padding: 0 8px;
       }
     }
 
-    /* ======= ФУТЕР – стрелка всегда справа ======= */
+    @media (max-width: 360px) {
+      .work-text h3 {
+        font-size: 1.4rem;
+      }
+      .work-text {
+        padding: 0 6px;
+      }
+    }
+
+    /* Услуги */
+    @media (max-width: 900px) {
+      .services-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+      }
+      .services-main-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-steps {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .step-img {
+        height: 160px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .step-img {
+        height: 140px;
+      }
+    }
+
+    /* Контакты и футер — стрелка всегда справа */
     .footer-inner {
-      flex-wrap: nowrap;         
+      flex-wrap: nowrap;
       justify-content: space-between;
     }
+
     @media (max-width: 500px) {
       .footer-copy {
-        font-size: 0.8rem;        
-        white-space: normal;     
+        font-size: 0.8rem;
+        white-space: normal;
       }
       .footer-top {
-        flex-shrink: 0;           
+        flex-shrink: 0;
         margin-left: 16px;
       }
+    }
+
+    /* Отключаем масштабирование */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+    img, video, iframe {
+      max-width: 100%;
+    }
+    .hero video {
+      max-width: none;
     }
   </style>
 </head>
@@ -730,7 +518,7 @@
       <a href="#contact">Контакты</a>
     </nav>
 
-    <!-- Десктопное меню -->
+    <!-- Десктопная навигация -->
     <nav class="nav-links">
       <a href="#about">О нас</a>
       <a href="#services">Услуги</a>
@@ -861,7 +649,7 @@
 </footer>
 
 <script>
-  // Изменение хедера при скролле
+  // Хедер при скролле
   const header = document.getElementById('mainHeader');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -869,6 +657,23 @@
     } else {
       header.classList.remove('scrolled');
     }
+  });
+
+  // Бургер-меню
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  // Закрываем меню при клике на любую ссылку внутри мобильного меню
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
   });
 
   // Анимация блоков работ
@@ -880,7 +685,6 @@
       }
     });
   }, { threshold: 0.2 });
-
   workBlocks.forEach(block => observer.observe(block));
 
   // Плавная прокрутка для якорей
