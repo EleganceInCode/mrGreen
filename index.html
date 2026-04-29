@@ -281,11 +281,11 @@
     .work-img {
       width: 100%;
       height: 0;
-      padding-bottom: 60%;      /* 5:3 — комфортная высота */
+      padding-bottom: 60%;      
       background-size: cover;
       background-position: center;
-      min-height: unset;        /* сбрасываем старый min-height */
-      border-radius: 16px;      /* легкое скругление для эстетики */
+      min-height: unset;       
+      border-radius: 0;     
     }
   
     /* Текст теперь по центру, а не прижат к краю */
@@ -295,8 +295,11 @@
     }
     .work-text h3 {
       font-size: 1.8rem;
+      word-break: break-word;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      }
     }
-  }
   
   /* На самых маленьких экранах картинка чуть выше */
   @media (max-width: 480px) {
@@ -547,7 +550,7 @@
     .footer-top:hover {
       color: #ffffff;
     }
-    
+
     /* БУРГЕР И МОБИЛЬНОЕ МЕНЮ */
     .burger {
       display: none;
