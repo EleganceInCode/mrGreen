@@ -248,21 +248,91 @@
     }
 
     /* Адаптив для мобильных */
-    @media (max-width: 768px) {
-      .work-block {
-        flex-direction: column;
-        gap: 30px;
-        transform: translateY(40px) !important;
-      }
-      .work-block.visible {
-        transform: translateY(0) !important;
-      }
-      .work-img {
-        min-height: 350px;
-        width: 100%;
-        flex: none;
-      }
+      @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.6rem;      /* было 4.5rem */
+      line-height: 1.2;
     }
+    .hero p {
+      font-size: 1rem;        /* было 1.3rem */
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+     }
+    }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2.2rem;
+     }
+    }
+
+    @media (max-width: 768px) {
+  .work-block {
+    flex-direction: column;
+    gap: 24px;
+    transform: translateY(40px) !important;
+  }
+  .work-block.visible {
+    transform: translateY(0) !important;
+  }
+
+  /* Картинка с сохранением пропорций */
+    .work-img {
+      width: 100%;
+      height: 0;
+      padding-bottom: 60%;      /* 5:3 — комфортная высота */
+      background-size: cover;
+      background-position: center;
+      min-height: unset;        /* сбрасываем старый min-height */
+      border-radius: 16px;      /* легкое скругление для эстетики */
+    }
+  
+    /* Текст теперь по центру, а не прижат к краю */
+    .work-text {
+      text-align: center;
+      padding: 0 12px;
+    }
+    .work-text h3 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* На самых маленьких экранах картинка чуть выше */
+  @media (max-width: 480px) {
+    .work-img {
+      padding-bottom: 75%;      /* 4:3 */
+    }
+    .work-text h3 {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .services-steps {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .step-img {
+      height: 160px;          /* было 180px, можно 140px для 320px */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .step-img {
+      height: 140px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.6rem;
+    }
+    .btn {
+      padding: 12px 28px;
+      font-size: 0.95rem;
+    }
+  }
 
     /* Заголовок услуг */
     .services-main-title {
